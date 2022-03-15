@@ -1,13 +1,19 @@
 ---
 wts:
-    title: '16 – Implementar marcação de recursos (5 min)'
-    module: 'Módulo 05: Descreva os recursos de identidade, governança, privacidade e conformidade'
+  title: 16 – Implantar marcação de recursos (5 min)
+  module: 'Module 05: Describe identity, governance, privacy, and compliance features'
+ms.openlocfilehash: cc7a298eb03be3dfcbcc1c69cfa7409bc94c0640
+ms.sourcegitcommit: dfe52fea15c568547ba630e9b337ec8df957ad80
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "139213860"
 ---
-# 16 – Implantar marcação de recursos (5 min)
+# <a name="16---implement-resource-tagging-5-min"></a>16 – Implantar marcação de recursos (5 min)
 
 Neste passo a passo, vamos criar uma atribuição de política que requer marcação, criar uma conta de armazenamento e testar a marcação, visualizar recursos com uma marcação especificada e remover a política de marcação.
 
-# Tarefa 1: Criar atribuição de Política 
+# <a name="task-1-create-a-policy-assignment"></a>Tarefa 1: Criar atribuição de Política 
 
 Nesta tarefa, vamos configurar a política **Exigir uma marca nos recursos** e atribuí-la à nossa assinatura. 
 
@@ -19,20 +25,20 @@ Nesta tarefa, vamos configurar a política **Exigir uma marca nos recursos** e a
 
 4. Observe que o **Escopo** de nossa política abrange toda a assinatura. 
 
-5. Em **Básico**, selecione o botão de reticências **Definição de política** (lado direito da caixa de texto). Na caixa **Pesquisar**, insira a **marca** de valor. Uma lista de políticas relacionadas com a palavra **marca** aparecerá. Role para baixo até encontrar **Exigir uma marca na definição de recursos**, clique nele e clique em **Selecionar**.
+5. Em **Básico**, selecione o botão de reticências **Definição de política** (lado direito da caixa de texto). Na caixa **Pesquisar**, insira a **marca** de valor. Uma lista de políticas relacionadas com a palavra **marca** aparecerá. Role para baixo até encontrar a definição **Exigir uma marca e seu valor nos recursos**, clique nela e clique em **Selecionar**.
 
-   ![Captura de tela do painel Definições disponíveis com Exigir uma marca nos recursos selecionados.](../images/1701.png)
+   ![image](https://user-images.githubusercontent.com/89808319/155607579-d564a43e-a9cd-443d-8482-f47879eff2e9.png)
    
-6.  Na guia **Parâmetros**, digite **Empresa: Contoso** para o nome do par chave/valor de marca. Clique em **Revisar + criar** e, em seguida, em **Criar**.
+6.  Na guia **Parâmetros**, digite **Empresa: Contoso ** para o nome do par de chave/valor. Clique em **Revisar + criar** e, em seguida, em **Criar**.
 
-    ![Captura de tela do painel Atribuir política com o nome da marca preenchido.](../images/1702.png)
+  
 
-7. A atribuição de política de **Exigir uma marca nos recursos** agora está em vigor. Quando um recurso é criado, ele deve incluir uma marca com a chave Empresa: Contoso.
+7. A atribuição de política **Exigir uma marca e seu valor nos recursos** está em vigor. Quando um recurso é criado, ele deve incluir uma marca com a chave de Empresa: Contoso.
    **Observação – você precisa esperar até 30 minutos para que a Política seja aplicada.** 
 
-   ![Captura de tela do painel Política – Atribuições com a atribuição de locais permitida realçada.](../images/1703.png)
+  ![image](https://user-images.githubusercontent.com/89808319/155607357-556646b6-9ca7-4817-a02e-643869b2c4dd.png)
 
-# Tarefa 2: Criar uma conta de armazenamento para testar a marcação necessária
+# <a name="task-2-create-a-storage-account-to-test-the-required-tagging"></a>Tarefa 2: Criar uma conta de armazenamento para testar a marcação necessária
 
 Nesta tarefa, criaremos contas de armazenamento para testar a marcação necessária. 
 
@@ -42,12 +48,12 @@ Nesta tarefa, criaremos contas de armazenamento para testar a marcação necess�
 
     | Configuração | Valor | 
     | --- | --- |
-    | Assinatura | **Use a padrão** |
-    | Grupo de recursos | **Criar novo grupo de recursos** |
+    | Subscription | **Use o padrão fornecido** |
+    | Resource group | **Criar grupo de recursos** |
     | Nome da conta de armazenamento | **storageaccountxxxx** |
-    | Local | **(EUA) Leste dos EUA** |
+    | Location | **(EUA) Leste dos EUA** |
 
-3. Clique em **Revisar + criar**. 
+3. Clique em **Revisar + Criar**. 
 
     **Observação:** Estamos testando para ver o que acontece quando a marca não é fornecida. Pode levar até 30 minutos para as Políticas entrarem em vigor.
 
@@ -62,11 +68,11 @@ Nesta tarefa, criaremos contas de armazenamento para testar a marcação necess�
 
     | Configuração | Valor | 
     | --- | --- |
-    | Nome da marca | **Empresa: Contoso** (pode não estar na lista suspensa) |
+    | Nome da marca | **Empresa:Contoso** (pode não estar na lista suspensa) |
 
 6. Clique em **Revisar + criar** e verifique se a validação foi bem-sucedida. Clique em **Criar** para implantar a conta de armazenamento. 
 
-# Tarefa 3: Veja todos os recursos com uma marca específica
+# <a name="task-3-view-all-resources-with-a-specific-tag"></a>Tarefa 3: Veja todos os recursos com uma marca específica
 
 1. No portal do Azure, na folha **Todos os serviços**, procure e selecione **Marcas**.
 
@@ -80,7 +86,7 @@ Nesta tarefa, criaremos contas de armazenamento para testar a marcação necess�
 
     ![Captura de tela do filtro Todos os recursos com Empresa selecionada.](../images/1706.png)
 
-# Tarefa 4: Excluir a atribuição de política
+# <a name="task-4-delete-the-policy-assignment"></a>Tarefa 4: Excluir a atribuição de política
 
 Nesta tarefa, removeremos a política **Exigir uma marca nos recursos** para que ela não afete nosso trabalho futuro. 
 
