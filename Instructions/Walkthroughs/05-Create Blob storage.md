@@ -1,17 +1,17 @@
 ---
 wts:
-    title: '05 – Criar armazenamento de blobs (5 min)'
-    module: 'Módulo 02 – Principais serviços do Azure (cargas de trabalho)'
+  title: 05 – Criar um armazenamento de blobs (5 min)
+  module: Module 02 - Core Azure Services (Workloads)
 ---
-# 05 – Criar um armazenamento de blobs (5 min)
+# <a name="05---create-blob-storage-5-min"></a>05 – Criar um armazenamento de blobs (5 min)
 
 Neste passo a passo, criaremos uma conta de armazenamento e, em seguida, trabalharemos com arquivos de armazenamento de blobs.
 
-# Tarefa 1: Criar uma conta de armazenamento 
+# <a name="task-1-create-a-storage-account"></a>Tarefa 1: Criar uma conta de armazenamento 
 
 Nesta tarefa, criaremos uma nova conta de armazenamento. 
 
-1. Entre no portal do Azure em <a href="https://portal.azure.com" target="_blank"><span style="color: #0066cc;" color="#0066cc">https://portal.azure.com</span></a>
+1. Entre no portal do Microsoft Azure em <a href="https://portal.azure.com" target="_blank"><span style="color: #0066cc;" color="#0066cc">https://portal.azure.com</span></a>
 
 2. Na folha **Todos os serviços**, procure e selecione **Contas de armazenamento** e depois selecione **+ Adicionar, + Criar, + Novo**. 
 
@@ -19,14 +19,14 @@ Nesta tarefa, criaremos uma nova conta de armazenamento.
 
     | Configuração | Valor | 
     | --- | --- |
-    | Assinatura | **Mantenha a padrão fornecida** |
-    | Grupo de recursos | **Criar novo grupo de recursos** |
+    | Subscription | **Mantenha a padrão fornecida** |
+    | Resource group | **Criar grupo de recursos** |
     | Nome da conta de armazenamento | **storageaccountxxxxx** |
-    | Local | **(EUA) Leste dos EUA**  |
+    | Location | **(EUA) Leste dos EUA**  |
     | Desempenho | **Standard** |
-    | Redundância | **LRS (armazenamento com redundância local)** |
+    | Redundância | **Armazenamento com redundância local (LRS)** |
     
-    **Observação** - Lembre-se de alterar o **xxxxx** para que tenha um **Nome de conta de armazenamento** exclusivo
+    **Observação**: lembre-se de alterar o **xxxxx** para que tenha um **Nome de conta de armazenamento** exclusivo
 
 5. Clique em **Revisar + Criar** para revisar as configurações da sua conta de armazenamento e permitir que o Azure valide a configuração. 
 
@@ -36,13 +36,13 @@ Nesta tarefa, criaremos uma nova conta de armazenamento.
 
     ![Captura de tela da conta de armazenamento recém-criada no portal do Azure.](../images/0401.png)
 
-# Tarefa 2: Trabalhar com armazenamento de blobs
+# <a name="task-2-work-with-blob-storage"></a>Tarefa 2: Trabalhar com armazenamento de blobs
 
 Nesta tarefa, criaremos um contêiner de blob e carregaremos um arquivo de blob. 
 
 1. Selecione o nome da nova conta de armazenamento, role até a seção **Armazenamento de dados** e, em seguida, selecione **Contêineres**.
 
-2. Clique em **+ Contêiner** e preencha as informações. Use os ícones de informações para saber mais. Quando terminar, clique em **Criar**.
+2. Clique em **+ Contêiner** e preencha as informações. Use os ícones de informações para saber mais. Quando terminar, clique em **criar**.
 
 
     | Configuração | Valor |
@@ -68,7 +68,7 @@ Nesta tarefa, criaremos um contêiner de blob e carregaremos um arquivo de blob.
 
 8. Se tiver tempo, revise as opções para Arquivos, Tabelas e Filas.
 
-# Tarefa 3: Monitorar a conta de armazenamento
+# <a name="task-3-monitor-the-storage-account"></a>Tarefa 3: Monitorar a conta de armazenamento
 
 1. Volte para a folha da conta de armazenamento e selecione **Diagnosticar e resolver problemas**. 
 

@@ -1,13 +1,13 @@
 ---
 wts:
-    title: '11 – Criar uma VM com o CLI (10 min)'
-    module: 'Módulo 03: Descrever as principais soluções e ferramentas de gerenciamento'
+  title: 11 – Criar VM com a CLI (10 min)
+  module: 'Module 03: Describe core solutions and management tools'
 ---
-# 11 – Criar VM com a CLI (10 min)
+# <a name="11---create-a-vm-with-the-cli-10-min"></a>11 – Criar VM com a CLI (10 min)
 
 Neste passo a passo, vamos configurar o Cloud Shell, usar a CLI do Azure para criar um grupo de recursos e máquina virtual e revisar as recomendações do Assistente do Azure. 
 
-# Tarefa 1: Configurar o Cloud Shell 
+# <a name="task-1-configure-the-cloud-shell"></a>Tarefa 1: Configurar o Cloud Shell 
 
 Nesta tarefa, vamos configurar o Cloud Shell e usar a CLI do Azure para criar um grupo de recursos e uma máquina virtual.  
 
@@ -22,12 +22,12 @@ Nesta tarefa, vamos configurar o Cloud Shell e usar a CLI do Azure para criar um
 4. Uma nova janela será aberta dizendo **Não há armazenamentos montados**. Selecione **configurações avançadas**.
 
 5. Na tela de configurações avançadas, preencha os campos a seguir e depois selecione Criar Armazenamento:
-    - Grupo de Recursos: **Criar novo grupo de recursos**
+    - Grupo de Recursos: **Criar grupo de recursos**
     - Conta de Armazenamento: crie uma conta nova e use um nome globalmente exclusivo (ex.: cloudshellxyzstorage)
     - Compartilhamento de Arquivos: Crie um novo e dê a ele o nome cloudshellfileshare
 
 
-# Tarefa 2: Usar a CLI para criar uma máquina virtual
+# <a name="task-2-use-cli-to-create-a-virtual-machine"></a>Tarefa 2: Usar a CLI para criar uma máquina virtual
 
 Nesta tarefa, usaremos a CLI do Azure para criar um grupo de recursos e uma máquina virtual.
 
@@ -65,7 +65,7 @@ Nesta tarefa, usaremos a CLI do Azure para criar um grupo de recursos e uma máq
     ![Captura de tela da página de máquinas virtuais com myVMPS em estado de execução.](../images/1101.png)
 
 
-# Tarefa 3: Executar comandos no Cloud Shell
+# <a name="task-3-execute-commands-in-the-cloud-shell"></a>Tarefa 3: Executar comandos no Cloud Shell
 
 Nesta tarefa, praticaremos a execução de comandos CLI do Cloud Shell. 
 
@@ -79,7 +79,7 @@ Nesta tarefa, praticaremos a execução de comandos CLI do Cloud Shell.
     az vm show --resource-group myRGCLI --name myVMCLI --show-details --output table 
     ```
 
-4. Pare a máquina virtual. Observe a mensagem de que a cobrança continua até que a máquina virtual seja desalocada. 
+4. Parar a máquina virtual. Observe a mensagem de que a cobrança continua até que a máquina virtual seja desalocada. 
 
     ```cli
     az vm stop --resource-group myRGCLI --name myVMCLI
@@ -91,7 +91,7 @@ Nesta tarefa, praticaremos a execução de comandos CLI do Cloud Shell.
     az vm show --resource-group myRGCLI --name myVMCLI --show-details --output table 
     ```
 
-# Tarefa 4: Analisar recomendações do Assistente do Azure
+# <a name="task-4-review-azure-advisor-recommendations"></a>Tarefa 4: Analisar recomendações do Assistente do Azure
 
 Nesta tarefa, revisaremos as recomendações do Assistente do Azure.
 

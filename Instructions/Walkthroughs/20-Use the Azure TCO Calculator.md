@@ -1,20 +1,20 @@
 ---
 wts:
-    title: '20 – Usar o Azure TCO Calculator (10 min)'
-    module: 'Módulo 06: Descreva o gerenciamento de custos do Azure e os acordos de nível de serviço'
+  title: 20 – Usar o Azure TCO Calculator (10 min)
+  module: 'Module 06: Describe Azure cost management and service level agreements'
 ---
-# 20 – Usar o Azure TCO Calculator (10 min)
+# <a name="20---use-the-azure-tco-calculator-10-min"></a>20 – Usar o Azure TCO Calculator (10 min)
 
 
 Neste passo a passo, você usará a calculadora do custo total de propriedade (TCO) para gerar um relatório de comparação de custos para um ambiente local.
 
 **Observação**: Este passo a passo fornece definições de exemplo de infraestrutura local e cargas de trabalho para um datacenter típico. Para criar um relatório da Calculadora do TCO, use as definições de exemplo ou forneça detalhes de sua infraestrutura local e cargas de trabalho *reais*.
 
-# Tarefa 1: Configurar a calculadora de TCO
+# <a name="task-1-configure-the-tco-calculator"></a>Tarefa 1: Configurar a calculadora de TCO
 
 Nesta tarefa, adicionaremos informações de infraestrutura à calculadora. 
 
-1. Em um navegador, navegue até a página [Calculadora do custo total de propriedade (TCO)](https://azure.microsoft.com/pt-br/pricing/tco/calculator/).
+1. Em um navegador, navegue até a página [Calculadora do custo total de propriedade (TCO)](https://azure.microsoft.com/en-us/pricing/tco/calculator/).
 
 2. Para adicionar detalhes de sua infraestrutura de servidor local, clique em **+ Adicionar carga de trabalho do servidor** no painel **Definir suas cargas de trabalho**.
 
@@ -50,12 +50,12 @@ Nesta tarefa, adicionaremos informações de infraestrutura à calculadora.
 
     | Configurações | Valor |
     | -- | -- |
-    | Nome | **Armazenamento de servidor** |
+    | Nome | **Armazenamento do Servidor** |
     | Tipo de armazenamento | **Disco Local/SAN** |
-    | Tipo de disco | **HD** |
-    | Capacidade | **60 TB** |  
+    | Tipo de disco | **HDD** |
+    | Capacity | **60 TB** |  
     | Backup | **120 TB** |
-    | Arquivar | **0 TB** |
+    | Archive | **0 TB** |
 
 5. No painel **Rede**, adicione largura de banda. 
 
@@ -73,7 +73,7 @@ Nesta tarefa, adicionaremos informações de infraestrutura à calculadora.
 
 8. Clique em **Próximo**.
 
-# Tarefa 2: Revisar os resultados e salvar uma cópia
+# <a name="task-2-review-the-results-and-save-a-copy"></a>Tarefa 2: Revisar os resultados e salvar uma cópia
 
 Nesta tarefa, revisaremos as recomendações de redução de custos e faremos o download de um relatório. 
 
@@ -81,7 +81,7 @@ Nesta tarefa, revisaremos as recomendações de redução de custos e faremos o 
 
     | Configurações | Valor |
     | -- | -- |
-    | Prazo| **3 anos** |
+    | Período de tempo| **3 anos** |
     | Região | **Norte da Europa** |
 
 2. Para modificar as informações fornecidas, vá até o final da página e clique em **Voltar**. 

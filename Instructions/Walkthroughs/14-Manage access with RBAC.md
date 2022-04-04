@@ -1,13 +1,13 @@
 ---
 wts:
-    title: '14 – Gerenciar acesso com o RBAC (5 min)'
-    module: 'Módulo 05: Descreva os recursos de identidade, governança, privacidade e conformidade'
+  title: 14 – Gerenciar acesso com o RBAC (5 min)
+  module: 'Module 05: Describe identity, governance, privacy, and compliance features'
 ---
-# 14 – Gerenciar acesso com o RBAC (5 min)
+# <a name="14---manage-access-with-rbac-5-min"></a>14 – Gerenciar acesso com o RBAC (5 min)
 
 Neste passo a passo, vamos atribuir funções de permissão e visualizar recursos e logs.
 
-# Tarefa 1: Visualizar e atribuir funções
+# <a name="task-1-view-and-assign-roles"></a>Tarefa 1: Visualizar e atribuir funções
 
 Nesta tarefa, atribuiremos a função de colaborador da máquina virtual. 
 
@@ -19,8 +19,8 @@ Nesta tarefa, atribuiremos a função de colaborador da máquina virtual.
 
     | Configuração | Valor |
     | -- | -- |
-    | Assinatura | **Use a padrão** |
-    | Grupo de recursos | **myRGRBAC** |
+    | Subscription | **Use o padrão fornecido** |
+    | Resource group | **myRGRBAC** |
     | Região | **(EUA) Leste dos EUA** |
    
 
@@ -29,13 +29,13 @@ Nesta tarefa, atribuiremos a função de colaborador da máquina virtual.
 5. **Atualize** a página do grupo de recursos e clique na entrada que representa o grupo de recursos recém-criado.
 
 6. Clique na folha **Controle de acesso (IAM)** e alterne para a guia **Funções**. Percorra o grande número de definições de funções disponíveis. Use os ícones informativos para ter uma ideia das permissões de cada função. Observe que também há informações sobre o número de usuários e grupos atribuídos a cada função.
+7. 
+![image](https://user-images.githubusercontent.com/89808319/144266949-f19d91ab-31d6-4c8b-af36-c00035925cf0.png)
 
-![imagem](https://user-images.githubusercontent.com/89808319/144266949-f19d91ab-31d6-4c8b-af36-c00035925cf0.png)
-
-7. Alterne para a guia **Atribuições de função** da folha **myRGRBAC – Controle de acesso (IAM)**, clique em **+ Adicionar** e, em seguida, clique em **Adicionar atribuição de função**. Pesquise pela função de Colaborador de máquina virtual e selecione. Vá para a guia "Membros" e Atribua acesso a: Usuário, grupo ou entidade de serviço. Depois, clique em + Selecionar membros e digite seu nome na função de pesquisa do pop-up e clique em 'selecionar'. Depois clique em 'Analisar e atribuir'
+7. Alterne para a guia **Atribuições de função** da folha **myRGRBAC – Controle de acesso (IAM)** , clique em **+ Adicionar** e, em seguida, clique em **Adicionar atribuição de função**. Procure a função Colaborador da Máquina Virtual e selecione. Alterne para a guia "Membros" e Atribua acesso a: usuário, grupo ou entidade de serviço. Em seguida, clique em + Selecionar membros e digite seu nome para a função de pesquisa pop-up e clique em 'selecionar'. Depois, clique em 'Revisar e atribuir'
 
     
-    ![imagem](https://user-images.githubusercontent.com/89808319/144266255-3a0f8574-9358-4c21-8f95-3503747e77c8.png)
+    ![image](https://user-images.githubusercontent.com/89808319/144266255-3a0f8574-9358-4c21-8f95-3503747e77c8.png)
 
  
 
@@ -47,7 +47,7 @@ Nesta tarefa, atribuiremos a função de colaborador da máquina virtual.
 
     **Observação**: Na verdade, essa atribuição não concede a você nenhum privilégio adicional, pois sua conta já tem a função de Proprietário, que inclui todos os privilégios associados à função de Colaborador.
 
-# Tarefa 2: Monitorar atribuições de funções e remover uma função
+# <a name="task-2-monitor-role-assignments-and-remove-a-role"></a>Tarefa 2: Monitorar atribuições de funções e remover uma função
 
 Nesta tarefa, veremos o log de atividades para verificar a atribuição de função e, em seguida, removeremos a função. 
 

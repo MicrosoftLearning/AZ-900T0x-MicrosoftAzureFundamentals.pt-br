@@ -1,48 +1,48 @@
 ---
 wts:
-    title: '09 – Criar uma VM com um modelo (10 min)'
-    module: 'Módulo 03: Descrever as principais soluções e ferramentas de gerenciamento'
+  title: 09 – Criar VM com um Modelo (10 min)
+  module: 'Module 03: Describe core solutions and management tools'
 ---
-# 09 – Criar VM com um Modelo (10 min)
+# <a name="09---create-a-vm-with-a-template-10-min"></a>09 – Criar VM com um Modelo (10 min)
 
 Neste passo a passo, implantaremos uma máquina virtual com um modelo de início rápido e examinaremos os recursos de monitoramento.
 
-# Tarefa 1: Explorar a galeria de Início Rápido e encontrar um modelo 
+# <a name="task-1-explore-the-quickstart-gallery-and-locate-a-template"></a>Tarefa 1: Explorar a galeria de Início Rápido e encontrar um modelo 
 
 Nesta tarefa, navegaremos na galeria de início rápido do Azure e implantaremos um modelo que cria uma máquina virtual. 
 
-1. No ambiente do laboratório, abra uma nova janela no navegador e insira T https://azure.microsoft.com/pt-br/resources/templates/?azure-portal=true. Na galeria, você encontrará vários modelos populares e atualizados recentemente. Esses modelos automatizam a implantação de recursos do Azure, incluindo a instalação de pacotes de software populares. Navegue pelos diversos tipos de modelos disponíveis.
+1. No ambiente de laboratório, abra uma nova janela do navegador e digite T https://azure.microsoft.com/en-us/resources/templates/?azure-portal=true. Na galeria, você encontrará vários modelos populares e atualizados recentemente. Esses modelos automatizam a implantação de recursos do Azure, incluindo a instalação de pacotes de software populares. Navegue pelos diversos tipos de modelos disponíveis.
 
-2. Selecione **Implantar VM simples do Windows**
+3. Selecione **Implantar VM simples do Windows**
 
-3. Clique no botão **Implantar no Azure**. A sessão do seu navegador será redirecionada automaticamente para o [portal do Azure](http://portal.azure.com/).
+4. Clique no botão **Implantar no Azure**. A sessão do seu navegador será redirecionada automaticamente para o [portal do Azure](http://portal.azure.com/).
 
   **Observação**: O botão **Implantar no Azure** permite que você implante o modelo por meio do portal do Azure. Durante essa implantação, será solicitado apenas um pequeno conjunto de parâmetros de configuração. 
 
-4. Quando solicitado, entre com sua assinatura Azure usando as credenciais fornecidas mais cedo nas instruções.
+5. Quando solicitado, entre em sua assinatura do Azure usando as credenciais fornecidas anteriormente nas instruções.
 
-5. Clique em **Editar modelo**. O formato de modelo do Resource Manager usa o formato JSON. Revise os parâmetros e variáveis.  Em seguida, localize o parâmetro para o nome da máquina virtual. Altere o nome para **myVMTemplate**. **Salve** suas alterações. 
+6. Clique em **Editar modelo**. O formato de modelo do Resource Manager usa o formato JSON. Revise os parâmetros e variáveis.  Em seguida, localize o parâmetro para o nome da máquina virtual. Altere o nome para **myVMTemplate**. **Salve** suas alterações. 
 
     ![Captura de tela do modelo com a mudança de nome da VM em destaque.](../images/0901.png)
 
-6. Agora, configure os parâmetros exigidos pelo modelo (substitua ***xxxx*** no prefixo da etiqueta de DNS por letras e dígitos para que o rótulo seja globalmente exclusivo). Mantenha os padrões para todo o resto. 
+7. Agora configure os parâmetros exigidos pelo modelo (substitua ***xxxx*** no prefixo da etiqueta de DNS por letras e dígitos para que a etiqueta seja globalmente exclusiva). Mantenha os padrões para todo o resto. 
 
     | Configuração| Valor|
     |----|----|
-    | Assinatura | **Mantenha a padrão fornecida**|
-    | Grupo de recursos | **Criar novo grupo de recursos** |
-    | Região | Mantenha a padrão |
+    | Subscription | **Manter o padrão fornecido**|
+    | Resource group | **Criar grupo de recursos** |
+    | Região | mantenha o padrão  |
     | Nome de usuário do administrador | **azureuser** |
-    | Senha do administrador | **Pa$$w0rd1234** |
+    | Senha de administrador | **Pa$$w0rd1234** |
     | Prefixo da etiqueta de DNS | **myvmtemplatexxxx** |
-    | Versão da OS | **2019-Datacenter** |
+    | Versão do SO | **2019-Datacenter** |
 
 
-7. Clique em **Revisar + Criar**.
+9. Clique em **Revisar + Criar**.
 
-8. Monitore sua implantação. 
+10. Monitore sua implantação. 
 
-# Tarefa 2: Verificar e monitorar a implantação de sua máquina virtual
+# <a name="task-2-verify-and-monitor-your-virtual-machine-deployment"></a>Tarefa 2: Verificar e monitorar a implantação de sua máquina virtual
 
 Nesta tarefa, vamos verificar a máquina virtual implantada corretamente. 
 
@@ -54,15 +54,15 @@ Nesta tarefa, vamos verificar a máquina virtual implantada corretamente.
 
 3. Selecione sua máquina virtual e, no painel **Visão geral**, selecione a guia **Monitoramento**. Role para baixo para visualizar os dados de monitoramento.
 
-    **Observação**: O período de monitoramento pode ser ajustado de uma hora a 30 dias.
+    **Observação**: O período de monitoramento pode ser ajustado de uma hora até 30 dias.
 
-4. Revise os diferentes gráficos fornecidos, incluindo **CPU (média)**, **Rede (total)** e **Bytes de disco (total)**. 
+4. Revise os diferentes gráficos fornecidos, incluindo **CPU (média)** , **Rede (total)** e **Bytes de disco (total)** . 
 
     ![Captura de tela dos gráficos de monitoramento da máquina virtual.](../images/0903.png)
 
 5. Clique em qualquer gráfico. Observe que você pode **Adicionar métrica** e alterar o tipo de gráfico.
 
-6. Retorne à folha **Visão geral**. (deslize a barra de alternância para a esquerda)
+6. Retorne à folha **Visão Geral**. (deslize a barra de alternância para a esquerda)
 7. Clique no **Log de atividades** (painel esquerdo). Os logs de atividades registram eventos como criação ou modificação de recursos. 
 
 8. Clique em **Adicionar filtro** e experimente pesquisar diferentes tipos de eventos e operações. 

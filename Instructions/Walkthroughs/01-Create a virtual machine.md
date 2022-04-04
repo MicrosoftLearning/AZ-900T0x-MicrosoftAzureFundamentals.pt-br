@@ -1,16 +1,16 @@
 ---
 wts:
-    title: '01 – Criar uma máquina virtual no portal (10 min)'
-    module: 'Módulo 02 – Principais serviços do Azure (cargas de trabalho)'
+  title: 01 – Criar uma máquina virtual no portal (10 min)
+  module: Module 02 - Core Azure Services (Workloads)
 ---
-# 01 – Criar uma máquina virtual no portal (10 min)
+# <a name="01---create-a-virtual-machine-in-the-portal-10-min"></a>01 – Criar uma máquina virtual no portal (10 min)
 
 Neste passo a passo, criaremos uma máquina virtual no portal do Azure, conectaremos à máquina virtual, instalaremos a função de servidor web e testaremos. 
 
-**Observação**: Reserve um tempo durante este passo a passo para clicar e ler os ícones informativos. 
+**Observação**: Reserve um tempo durante este passo a passo para selecionar e ler os ícones informativos. 
 
-# Tarefa 1: Criar a máquina virtual 
-1. Entre no portal do Azure **https://portal.azure.com**
+# <a name="task-1-create-the-virtual-machine"></a>Tarefa 1: Criar a máquina virtual 
+1. Entre no portal do Azure: **https://portal.azure.com**
 
 3. Na folha **Todos os serviços** no Menu do Portal, pesquise e selecione **Máquinas virtuais**, depois selecione **+Adicionar, +Criar, +Novo** e escolha **+Máquina virtual** no menu suspenso.
 
@@ -18,21 +18,21 @@ Neste passo a passo, criaremos uma máquina virtual no portal do Azure, conectar
 
     | Configurações | Valores |
     |  -- | -- |
-    | Assinatura | **Usar a padrão fornecida** |
-    | Grupo de recursos | **Criar novo grupo de recursos** |
+    | Subscription | **Use a padrão fornecida** |
+    | Resource group | **Criar grupo de recursos** |
     | Nome da máquina virtual | **myVM** |
     | Região | **(EUA) Leste dos EUA**|
     | Opções de disponibilidade | Nenhuma opção de redundância de infraestrutura exigida|
-    | Imagem | **Windows Server 2019 Datacenter – Gen2**|
+    | Image | **Datacenter do Windows Server 2019 – Gen2**|
     | Tamanho | **Standard D2s v3**|
     | Nome de usuário da conta de administrador | **azureuser** |
     | Senha da conta de administrador (digite com atenção!) | **Pa$$w0rd1234**|
-    | Regras da porta de entrada - | **Permitir portas selecionadas**|
-    | Selecionar portas de entrada | **RDP (3389)** e **HTTP (80)**| 
+    | Regras da porta de entrada - | **Permitir portas selecionadas **|
+    | Selecione as portas de entrada | **RDP (3389)** e **HTTP (80)**| 
 
 5. Passe para a guia Rede para verificar se **HTTP (80) e RDP (3389)** estão selecionadas na seção **Selecionar portas de entrada**.
 
-6. Passe para a guia Gerenciamento e, na seção **Monitoramento**, selecione a seguinte configuração:
+6. Alterne para a guia Gerenciamento e, em sua seção **Monitoring**, selecione a seguinte configuração:
 
     | Configurações | Valores |
     | -- | -- |
@@ -44,7 +44,7 @@ Neste passo a passo, criaremos uma máquina virtual no portal do Azure, conectar
 
 9. Você vai receber atualizações na página de implantação e por meio da área de **Notificações** (ícone de sino na barra de menu superior).
 
-# Tarefa 2: Conectar-se à máquina virtual
+# <a name="task-2-connect-to-the-virtual-machine"></a>Tarefa 2: Conectar-se à máquina virtual
 
 Nesta tarefa, vamos nos conectar à nova máquina virtual usando RDP (Protocolo de Área de Trabalho Remota). 
 
@@ -56,7 +56,7 @@ Nesta tarefa, vamos nos conectar à nova máquina virtual usando RDP (Protocolo 
 
     ![Captura de tela das propriedades da máquina virtual com o botão Conectar destacado.](../images/0101.png)
 
-    **Observação**: As instruções a seguir mostram como se conectar à VM desde um computador Windows. Em um Mac, você precisa de um cliente RDP, como este Remote Desktop Client da Mac App Store; em um computador Linux, você pode usar um cliente RDP de software livre.
+    **Observação**: As instruções a seguir mostram como se conectar à VM a partir de um computador Windows. Em um Mac, você precisa de um cliente RDP, como este Remote Desktop Client da Mac App Store; em um computador Linux, você pode usar um cliente RDP de software livre.
 
 2. Na página **Conectar à máquina virtual**, mantenha as opções padrão para se conectar ao endereço IP público na porta 3389 e selecione **Baixar Arquivo RDP**. O arquivo será baixado e aparecerá no canto inferior esquerdo da tela.
 
@@ -72,7 +72,7 @@ Nesta tarefa, vamos nos conectar à nova máquina virtual usando RDP (Protocolo 
 
 A nova Máquina Virtual (myVM) será iniciada no Laboratório. Feche o Gerenciador do Servidor e a janela pop-up aberta (selecione o “X” no canto superior direito). Deve ser exibido o plano de fundo da sua máquina virtual. **Parabéns!** Você implantou e se conectou à Máquina Virtual executando o Windows Server. 
 
-# Tarefa 3: Instalar a função de servidor Web e testar
+# <a name="task-3-install-the-web-server-role-and-test"></a>Tarefa 3: Instalar a função de servidor Web e testar
 
 Nesta tarefa, instale a função de Servidor Web no servidor da máquina virtual recém-criada e verifique se a página de boas-vindas padrão do IIS é exibida. 
 
@@ -86,7 +86,7 @@ Nesta tarefa, instale a função de Servidor Web no servidor da máquina virtual
     Install-WindowsFeature -name Web-Server -IncludeManagementTools
     ```
   
-3. Quando concluído, um prompt vai aparecer informando o **Êxito**, com valor **True**. Você não precisa reiniciar a máquina virtual para concluir a instalação. Feche a conexão do RDP à VM selecionando o **x** na barra azul no centro superior da máquina virtual. Você também pode minimizar selecionando **-** na barra azul na parte superior central.
+3. Quando concluído, um prompt vai aparecer informando o **Êxito**, com valor **True**. Você não precisa reiniciar a máquina virtual para concluir a instalação. Feche a conexão do RDP à VM selecionando o **x** na barra azul no centro superior da máquina virtual. Também é possível minimizá-la selecionando **-** na barra azul na parte superior central.
 
     ![Captura de tela do prompt de comando do Windows PowerShell com o comando Install-WindowsFeature -name Web-Server -IncludeManagementTools concluído com êxito e saída informando que foi bem-sucedido.](../images/0106.png)
 
@@ -101,4 +101,4 @@ Nesta tarefa, instale a função de Servidor Web no servidor da máquina virtual
 **Parabéns!** Você criou uma VM executando um servidor Web acessível por meio do endereço IP público. Se você tivesse um aplicativo Web para hospedar, poderia implantar arquivos de aplicativo na máquina virtual e hospedá-los para acesso público na máquina virtual implantada.
 
 
-**Observação**: Para evitar custos adicionais, você tem a opção de remover este grupo de recursos. Procure grupos de recursos, clique em seu grupo de recursos e, em seguida, clique em **Excluir grupo de recursos**. Verifique o nome do grupo de recursos e clique em **Excluir**. Monitore as **Notificações** para ver como a exclusão está ocorrendo.
+**Observação**: Para evitar custos adicionais, você tem a opção de remover este grupo de recursos. Procure grupos de recursos, clique em seu grupo de recursos e, em seguida, clique em **Excluir grupo de recursos**. Verifique o nome do grupo de recursos e clique em **Excluir**. Monitore as **Notificações** para verificar se a exclusão foi concluída com êxito. 

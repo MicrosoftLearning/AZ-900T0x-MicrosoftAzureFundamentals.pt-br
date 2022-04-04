@@ -1,13 +1,13 @@
 ---
 wts:
-    title: '17 – Criar uma Azure Policy (10 min)'
-    module: 'Módulo 05: Descreva os recursos de identidade, governança, privacidade e conformidade'
+  title: 17 – Criar Azure Policy (10 min)
+  module: 'Module 05: Describe identity, governance, privacy, and compliance features'
 ---
-# 17 – Criar Azure Policy (10 min)
+# <a name="17---create-an-azure-policy-10-min"></a>17 – Criar Azure Policy (10 min)
 
 Neste passo a passo, criaremos uma Azure Policy para restringir a implantação dos recursos do Azure em um local específico.
 
-# Tarefa 1: Criar atribuição de Política 
+# <a name="task-1-create-a-policy-assignment"></a>Tarefa 1: Criar atribuição de Política 
 
 Nesta tarefa, vamos configurar a política de localização permitida e atribuí-la à nossa assinatura. 
 
@@ -15,7 +15,7 @@ Nesta tarefa, vamos configurar a política de localização permitida e atribuí
 
 2. Na folha **Todos os serviços**, procure e selecione **Política**. Na seção **Criação**, clique em **Definições**.  Reserve um momento para revisar a lista de definições de política integradas. Por exemplo, na lista suspensa **Categoria**, selecione apenas **Calcular**. Observe que a definição **SKUs permitidos de máquina virtual** possibilita especificar um conjunto de SKUs de máquina virtual que pode ser implantado pela sua empresa.
 
-3. Retorne à página **Política**, na seção **Criação**, clique em **Atribuições**. Uma atribuição é uma política atribuída para ocorrer dentro de um escopo específico. Por exemplo, uma definição pode ser atribuída ao escopo da assinatura. 
+3. Retorne à página **Política**, na seção **Criação**, clique em **Atribuições**. Uma atribuição é uma política que foi atribuída para entrar em vigor em um escopo específico. Por exemplo, uma definição pode ser atribuída ao escopo da assinatura. 
 
 4. Clique em **Atribuir política** na parte superior da página **Política – Atribuições**.
 
@@ -25,20 +25,20 @@ Nesta tarefa, vamos configurar a política de localização permitida e atribuí
     | --- | --- |
     | Escopo| **Use o padrão selecionado**|
     | Definição de política | selecione as reticências, pesquise **Locais Permitidos** e pressione **Selecionar** |
-    | Nome da atribuição | **Locais permitidos** |
+    | Nome da Atribuição | **Locais permitidos** |
     
     ![Captura de tela do painel Escopo com valores de campo preenchidos e o botão Selecionar destacado. ](../images/1402.png)
 6. Na guia **Parâmetros**, selecione **Oeste do Japão**. Clique em **Revisar + criar** e, em seguida, em **Criar**.
 
     **Observação**: Um escopo determina a quais recursos ou agrupamento de recursos a atribuição de política se aplica. Em nosso caso, poderíamos atribuir essa política a um grupo de recursos específico, no entanto, optamos por atribuir a política no nível de assinatura. Esteja ciente de que os recursos podem ser excluídos com base na configuração do escopo. As exclusões são opcionais.
 
-    **Observação**: Esta definição de política de **Locais permitidos** especificará um local no qual todos os recursos devem ser implantados. Se um local diferente for escolhido, a implantação não será permitida. Para obter mais informações, consulte a página [Amostras de Azure Policy](https://docs.microsoft.com/pt-br/azure/governance/policy/samples/index).
+    **Observação**: Esta definição de política de **Locais permitidos** especificará um local no qual todos os recursos devem ser implantados. Se um local diferente for escolhido, a implantação não será permitida. Para obter mais informações, consulte a página [Amostras de Azure Policy](https://docs.microsoft.com/en-us/azure/governance/policy/samples/index).
 
    ![Captura de tela do painel Definições disponíveis com vários campos destacados e a opção Auditar VMs que não usam discos gerenciados selecionada.](../images/1403.png)
 
 9. A atribuição de política de **Locais permitidos** agora está listada no painel **Política – Atribuições** e está em vigor, impondo a política no nível de escopo que especificamos (nível de assinatura).
 
-# Tarefa 2: Testar política de localização permitida
+# <a name="task-2-test-allowed-location-policy"></a>Tarefa 2: Testar política de localização permitida
 
 Nesta tarefa, testaremos a política de localização permitida. 
 
@@ -48,16 +48,16 @@ Nesta tarefa, testaremos a política de localização permitida.
 
     | Configuração | Valor | 
     | --- | --- |
-    | Assinatura | **Use a padrão fornecida** |
-    | Grupo de recursos | **myRGPolicy** (criar novo) |
+    | Subscription | **Use o padrão fornecido** |
+    | Resource group | **myRGPolicy** (criar novo) |
     | Nome da conta de armazenamento | **storageaccountxxxx** |
-    | Local | **(EUA) Leste dos EUA** |
+    | Location | **(EUA) Leste dos EUA** |
 
 3. Clique em **Revisar + criar** e, em seguida, clique em **Criar**. 
 
 4. Você encontrará o erro de **falha de implantação** informando que o recurso não foi permitido pela política, incluindo a política **Locais permitidos**.
 
-# Tarefa 3: Excluir a atribuição de política
+# <a name="task-3-delete-the-policy-assignment"></a>Tarefa 3: Excluir a atribuição de política
 
 Nesta tarefa, removeremos a atribuição e o teste da política de localização permitida. 
 

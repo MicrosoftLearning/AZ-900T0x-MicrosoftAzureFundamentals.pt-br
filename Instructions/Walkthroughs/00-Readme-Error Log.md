@@ -1,5 +1,5 @@
 ---
 wts:
-    title: '00 – Leia-me – Registro de erros'
-    module: 'Módulo 00 – Introdução ao curso'
+  title: 00 – Leia-me – Log de erros
+  module: Module 00 - Course Introduction
 ---

@@ -1,15 +1,15 @@
 ---
 wts:
-    title: '02 – Criar um aplicativo Web (10 min)'
-    module: 'Módulo 02 – Principais serviços do Azure (cargas de trabalho)'
+  title: 02 – Criar um Aplicativo Web (10 min)
+  module: Module 02 - Core Azure Services (Workloads)
 ---
-# 02 – Criar um Aplicativo Web (10 min)
+# <a name="02---create-a-web-app-10-min"></a>02 – Criar um Aplicativo Web (10 min)
 
 Neste passo a passo, vamos criar um aplicativo Web que executa um contêiner do Docker. O contêiner do Docker exibe uma mensagem de Boas-Vindas. 
 
 O Serviço de Aplicativo do Azure é, na verdade, uma coleção de quatro serviços compilados para ajudar a hospedar e executar aplicativos Web. Os quatro serviços (aplicativos Web, aplicativos móveis, aplicativos de API e aplicativos lógicos) parecem diferentes, mas no final todos operam de maneiras muito semelhantes. Os aplicativos Web são os mais comumente usados dos quatro serviços, e este é o serviço que usaremos neste laboratório.
 
-# Tarefa 1: Criar um aplicativo Web 
+# <a name="task-1-create-a-web-app"></a>Tarefa 1: Criar um aplicativo Web 
 
 Nesta tarefa, você criará um Aplicativo Web do Serviço de Aplicativo do Azure. 
 
@@ -17,15 +17,15 @@ Nesta tarefa, você criará um Aplicativo Web do Serviço de Aplicativo do Azure
 
 2. Na folha **Todos os serviços**, procure e selecione **Serviços de Aplicativos** e clique em **+ Adicionar, + Criar, + Novo**
 
-3. Na guia **Básico** da folha **Aplicativo Web**, especifique as seguintes configurações (substitua **xxxx** no nome do aplicativo Web por letras e dígitos de forma que o nome seja globalmente exclusivo). Mantenha os padrões para todo o resto, incluindo o Plano do Serviço de Aplicativo. 
+3. Na guia **Básico** da folha **Aplicativo Web**, especifique as seguintes configurações (substitua **xxxx** no nome do aplicativo Web por letras e dígitos de forma que o nome seja exclusivo globalmente). Mantenha os padrões para todo o resto, incluindo o Plano do Serviço de Aplicativo. 
 
     | Configuração | Valor |
     | -- | -- |
-    | Assinatura | **Usar a padrão fornecida** |
-    | Grupo de Recursos | **Criar novo grupo de recursos**|
+    | Subscription | **Use a padrão fornecida** |
+    | Grupo de recursos | **Criar grupo de recursos**|
     | Nome | **myDockerWebAppxxxx** |
     | Publicar | **Contêiner do Docker** |
-    | Sistema Operacional | **Linux** |
+    | Sistema operacional | **Linux** |
     | Região | **Leste dos EUA** |
     
     **Observação:** Lembre-se de alterar o **xxxx** para que o Aplicativo Web tenha um nome exclusivo.
@@ -43,7 +43,7 @@ Nesta tarefa, você criará um Aplicativo Web do Serviço de Aplicativo do Azure
 
 5. Clique em **Revisar + criar** e, em seguida, clique em **Criar**. 
 
-# Tarefa 2: Testar o aplicativo Web
+# <a name="task-2-test-the-web-app"></a>Tarefa 2: Testar o aplicativo Web
 
 Nesta tarefa, testaremos o aplicativo Web.
 
@@ -55,7 +55,7 @@ Nesta tarefa, testaremos o aplicativo Web.
 
     ![Captura de tela da folha de propriedades do aplicativo Web. O URL é destacado.](../images/0801.png)
 
-4. Abra uma nova guia do navegador, cole a URI e pressione enter. Vai aparecer a mensagem Bem-vindo às Instâncias de Contêiner do Azure!
+4. Abra uma nova guia do navegador, cole a URI e pressione enter. Boas-vindas às Instâncias de Contêiner do Azure! a mensagem de boas-vindas será exibida.
 
     ![Captura de tela da página Bem-vindo à Instância de Contêiner do Azure.](../images/0802.png)
 

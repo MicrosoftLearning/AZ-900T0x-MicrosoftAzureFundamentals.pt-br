@@ -1,26 +1,26 @@
 ---
 wts:
-    title: '12 – Implementar Azure Key Vault (5 min)'
-    module: 'Módulo 04: Descreva a segurança geral e os recursos de segurança da rede'
+  title: 12 – Implantar o Azure Key Vault (5 min)
+  module: 'Module 04: Describe general security and network security features'
 ---
-# 12 – Implantar o Azure Key Vault (5 min)
+# <a name="12---implement-azure-key-vault-5-min"></a>12 – Implantar o Azure Key Vault (5 min)
 
 Neste passo a passo, criaremos um Azure Key Vault e, em seguida, criaremos um segredo de senha dentro desse cofre de chaves, fornecendo uma senha armazenada com segurança e gerenciada centralmente para uso com aplicativos.
 
-# Tarefa 1: Criar um Azure Key Vault 
+# <a name="task-1-create-an-azure-key-vault"></a>Tarefa 1: Criar um Azure Key Vault 
 
 1. Entre no [portal do Azure](https://portal.azure.com).
 
-2. Na folha **Todos os serviços**, procure e selecione **Cofres de chaves** e, em seguida, selecione **+Adicionar +Novo +Criar**.
+2. Na folha **Todos os serviços**, procure e selecione **Cofres de chaves** e selecione **+Adicionar +Novo +Criar **.
 
 3. Configure o cofre de chaves (substitua **xxxx** no nome do cofre de chaves por letras e dígitos de forma que o nome seja globalmente exclusivo). Mantenha os padrões para todo o resto.
 
     | Configuração | Valor | 
     | --- | --- |
-    | Assinatura | **Use a padrão fornecida** |
-    | Grupo de recursos | **Criar novo grupo de recursos** |
+    | Subscription | **Use a padrão fornecida** |
+    | Resource group | **Criar grupo de recursos** |
     | Nome do cofre de chaves | **keyvaulttestxxx** |
-    | Local | **Leste dos EUA** |
+    | Location | **Leste dos EUA** |
     | Tipo de preço | **Standard** |
     
     **Observação** substitua **xxxx** para ter um nome exclusivo.
@@ -34,7 +34,7 @@ Neste passo a passo, criaremos um Azure Key Vault e, em seguida, criaremos um se
 
     **Observação**: Sua conta do Azure é a única autorizada a realizar operações neste novo cofre. Você pode modificar isso se desejar nas **Configurações** e, em seguida, na seção **Políticas de acesso**.
 
-# Tarefa 2: Adicionar um segredo ao cofre de chaves
+# <a name="task-2-add-a-secret-to-the-key-vault"></a>Tarefa 2: Adicionar um segredo ao cofre de chaves
         
 Nesta tarefa, adicionaremos uma senha ao cofre de chaves. 
 
