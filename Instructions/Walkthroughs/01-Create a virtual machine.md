@@ -2,6 +2,12 @@
 wts:
   title: 01 – Criar uma máquina virtual no portal (10 min)
   module: Module 02 - Core Azure Services (Workloads)
+ms.openlocfilehash: 010d6a19a66f6ac92627720379a4eb850b2ee423
+ms.sourcegitcommit: 4a0bfef63f98844f16e2a364d156e96382b8fac5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "144556865"
 ---
 # <a name="01---create-a-virtual-machine-in-the-portal-10-min"></a>01 – Criar uma máquina virtual no portal (10 min)
 
@@ -12,7 +18,7 @@ Neste passo a passo, criaremos uma máquina virtual no portal do Azure, conectar
 # <a name="task-1-create-the-virtual-machine"></a>Tarefa 1: Criar a máquina virtual 
 1. Entre no portal do Azure: **https://portal.azure.com**
 
-3. Na folha **Todos os serviços** no Menu do Portal, pesquise e selecione **Máquinas virtuais**, depois selecione **+Adicionar, +Criar, +Novo** e escolha **+Máquina virtual** no menu suspenso.
+3. Na folha **Todos os serviços** no Menu do Portal, pesquise e selecione **Máquinas virtuais**, clique em **+Criar** e escolha **+Máquina virtual do Azure** no menu suspenso.
 
 4. Na guia **Básico**, preencha as seguintes informações (mantenha os padrões para todo o resto):
 
